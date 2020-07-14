@@ -1,0 +1,16 @@
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <app-counter [counter]="parentData" [pauseTimer]="pause" (logCounter)="logCounterInfo($event)"></app-counter>
+    </div>
+    <div class="col-sm-8">
+        <app-timer-input (inputVal)="parentData=$event" (pauseTimer)="pauseFromChild($event)"></app-timer-input>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-sm-6">
+        <app-time-stamps [counterLog]="counterStatus"></app-time-stamps>
+    </div>
+    <div class="col-sm-6">
+        <app-log-count [counterTicks]="counterTicks"></app-log-count>
+    </div>
+</div>

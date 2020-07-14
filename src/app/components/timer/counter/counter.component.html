@@ -1,0 +1,7 @@
+<div class="text-center">
+    <h3>Count Down Timer</h3>
+    <h1 *ngIf="counter > -1; else reset">{{ counter }}</h1>
+    <ng-template #reset>
+        <h1 class="text-center">0</h1>
+    </ng-template>
+</div>

@@ -1,0 +1,33 @@
+<div class="filter-container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="view">
+                <span id="gridView" class="grid-icon" [ngClass]="{'active': viewType}"
+                    (click)="changeViewHandler('gridView')"><i class="fas fa-th"></i></span>
+                <span id="listView" class="list-icon" [ngClass]="{'active': !viewType}"
+                    (click)="changeViewHandler('listView')"><i class="fas fa-th-list"></i></span>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Price Filter
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <label class="dropdown-item" (click)="priceFilterHandler('low')">Low to high</label>
+                    <label class="dropdown-item" (click)="priceFilterHandler('high')">high to low</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-cont row">
+    <div class="product-cont__item mb-4" [ngClass]="{'col-sm-3': viewType, 'col-sm-6': !viewType}"
+        *ngFor="let product of productList">
+        <div class="product-cont__item__content">
+            <img class="mb-2" alt="dummy image" src="https://dummyimage.com/931x785"/>
+            <h4 class="title">{{ product.name }}</h4>
+            <p class="text">{{ product.content }}</p>
+            <p class="text font-weight-bold">price: {{ product.price }}</p>
+        </div>
+    </div>
+</div>

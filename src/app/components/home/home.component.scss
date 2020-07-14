@@ -1,0 +1,12 @@
+.banner-container {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    &__label {
+        border: 2px solid grey;
+        height: auto;
+        width: auto;
+        display: inline-block;
+    }
+}

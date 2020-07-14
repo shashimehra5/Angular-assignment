@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" appSortDirective [sortKey]="'id'" [data]="users" (sortedData)="sortedData($event)">Id</th>
+      <th scope="col" appSortDirective [sortKey]="'name'" [data]="users" (sortedData)="sortedData($event)">Name</th>
+      <th scope="col" appSortDirective [sortKey]="'class'" [data]="users" (sortedData)="sortedData($event)">Class</th>
+      <th scope="col" appSortDirective [sortKey]="'section'" [data]="users" (sortedData)="sortedData($event)">Section</th>
+      <th scope="col" appSortDirective [sortKey]="'age'" [data]="users" (sortedData)="sortedData($event)">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersData">
+      <th scope="row">{{ user.id }}</th>
+      <td>{{ user.name }}</td>
+      <td>{{ user.class }}</td>
+      <td>{{ user.section }}</td>
+      <td>{{ user.age }}</td>
+    </tr>
+  </tbody>
+</table>

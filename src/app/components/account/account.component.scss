@@ -1,0 +1,13 @@
+.custom-div {
+    height: 200px;
+    display: flex;
+    > div {
+        background-color: #f1f1f1;
+        display: flex;
+        margin: 10px;
+        padding: 20px;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+}
